@@ -1,67 +1,53 @@
-# Program make a simple calculator
+print()
+print("Welcom to calculator...")
+print()
 
-# This function adds two numbers
-def add(x, y):
-    return x + y
+def add(a,b):
+    return a+b
 
-# This function subtracts two numbers
-def subtract(x, y):
-    return x - y
+def sub(a,b):
+    return a-b
 
-# This function multiplies two numbers
-def multiply(x, y):
-    return x * y
+def multi(a,b):
+    return a*b
 
-# This function divides two numbers
-def divide(x, y):
-    return x / y
+def div(a,b):
+    return a/b
 
+def power(a,b):
+    return a**b
 
-print("Select operation.")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
+def rem(a,b):
+    return a%b
+
+print("1. Addition.")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+print("5. Power")
+print("6. Modulus")
 
 while True:
-    # take input from the user
-    choice = input("Enter choice(1/2/3/4): ")
-
-    # check if choice is one of the four options
-    if choice in ('1', '2', '3', '4'):
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-
-        if choice == '1':
-            print(num1, "+", num2, "=", add(num1, num2))
-
-        elif choice == '2':
-            print(num1, "-", num2, "=", subtract(num1, num2))
-
-        elif choice == '3':
-            print(num1, "*", num2, "=", multiply(num1, num2))
-
-        elif choice == '4':
-            print(num1, "/", num2, "=", divide(num1, num2))
-        
-        # check if user wants another calculation
-        # break the while loop if answer is no
-        next_calculation = input("Let's do next calculation? (yes/no): ")
-        if next_calculation == "no":
-          break
+    choice = input("Enter the Operation(1/2/3/4/5/6): ")
     
+    if choice in ('1','2','3','4','5','6'):
+        a,b = map(float,input("Enter the numbers: ").split())
+        if choice == '1':
+            print(f"{a} + {b} = {add(a,b)}")
+        elif choice == '2':
+            print(f"{a} - {b} = {sub(a,b)}")
+        elif choice == '3':
+            print(f"{a} * {b} = {multi(a,b)}")
+        elif choice == '4':
+            print(f"{a} / {b} = {div(a,b)}")
+        elif choice == '5':
+            print(f"{a} ^ {b} = {power(a,b)}")
+        elif choice == '6':
+            print(f"{a} % {b} = {rem(a,b)}")
+        
+        next = input("Want more caculation (Yes/No): ").lower()
+        if next == 'no':
+            print("Thank you for Visiting.")
+            break
     else:
-        print("Invalid Input")
-Run Code
-Output
-
-Select operation.
-1.Add
-2.Subtract
-3.Multiply
-4.Divide
-Enter choice(1/2/3/4): 3
-Enter first number: 15
-Enter second number: 14
-15.0 * 14.0 = 210.0
-Let's do next calculation? (yes/no): no
+        print("Invalid Choice, Try Again..")
