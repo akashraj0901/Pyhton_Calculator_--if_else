@@ -1,5 +1,5 @@
 print()
-print("Welcom to calculator...")
+print("Welcome to calculator...")
 print()
 
 def add(a,b):
@@ -45,7 +45,7 @@ while True:
         elif choice == '6':
             print(f"{a} % {b} = {rem(a,b)}")
         
-        next = input("Want more caculation (Yes/No): ").lower()
+        next = input("Want more calculation (Yes/No): ").lower()
         if next == 'no':
             print("Thank you for Visiting.")
             break
