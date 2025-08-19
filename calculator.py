@@ -2,6 +2,7 @@ print()
 print("Welcome to calculator...")
 print()
 
+# Operation
 def add(a,b):
     return a+b
 
@@ -12,14 +13,21 @@ def multi(a,b):
     return a*b
 
 def div(a,b):
-    return a/b
+    if b == 0:
+        return "Undefine"
+    else:
+        return a/b
 
 def power(a,b):
     return a**b
 
 def rem(a,b):
-    return a%b
+    if b == 0:
+        return "Undefine"
+    else:
+        return a%b
 
+#Choice
 print("1. Addition.")
 print("2. Subtraction")
 print("3. Multiplication")
